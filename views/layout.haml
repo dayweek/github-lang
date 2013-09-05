@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title Github - Show language
+    = bootstrap_assets
+  %body{:style => "padding-top: 50px;"}
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand
+            Github - Show language
+    .container
+      - if flash[:notice]
+        .alert.alert-success.centered-text
+          = flash[:notice]
+      - if flash[:alert]
+        .alert.alert-error.centered-text
+          = flash[:alert]
+      = yield
